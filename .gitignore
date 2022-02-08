@@ -1,2 +1,11 @@
 # macOS
 *.DS_Store
+
+# VS Code
+.vscode
+
+# debugging
+debug
+
+# building
+build
