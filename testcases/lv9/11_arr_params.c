@@ -6,7 +6,7 @@ void f1d(int arr[]) {
   }
 }
 
-void f2d(int arr[][10]) {
+void f2d(int arr[][8 + 2]) {
   int i = 0;
   while (i < 10) {
     f1d(arr[i]);
