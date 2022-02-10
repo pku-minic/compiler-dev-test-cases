@@ -6,7 +6,7 @@ int main() {
   while (i < 2) {
     int j = 0;
     while (j < 3) {
-      sum = sum + b[i][j] + gb[2][3];
+      sum = sum + b[i][j] + gb[i][j];
       j = j + 1;
     }
     i = i + 1;

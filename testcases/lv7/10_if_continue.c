@@ -3,6 +3,7 @@ int main() {
   while (i < 10) {
     if (i == 5) {
       sum = sum + 7;
+      i = i + 1;
       continue;
     }
     sum = sum + i;
