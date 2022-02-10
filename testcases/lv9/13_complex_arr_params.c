@@ -58,5 +58,7 @@ int main() {
   int sum = sum3d(10, arr);
   sum = sum + sum2d(10, arr[1]);
   sum = sum + sum1d(10, arr[2][3]);
+  putint(sum);
+  putch(10);
   return sum;
 }
