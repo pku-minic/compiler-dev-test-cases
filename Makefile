@@ -9,7 +9,8 @@ CFLAGS := -Wall -Werror
 CFLAGS += -Wno-implicit-function-declaration -Wno-unused-variable
 CFLAGS += -Wno-unused-value -Wno-dangling-else -Wno-logical-op-parentheses
 CFLAGS += -Wno-empty-body -Wno-missing-braces -Wno-constant-logical-operand
-CFLAGS += -Wno-tautological-overlap-compare
+CFLAGS += -Wno-tautological-overlap-compare -Wno-unused-but-set-variable
+CFLAGS += -Wno-gnu-folding-constant
 CFLAGS += -O3 -fsanitize=address -fsanitize=undefined
 CC := clang $(CFLAGS)
 
