@@ -1,7 +1,10 @@
+int init = 0;
+
 void init1d(int n, int arr[]) {
   int i = 0;
   while (i < n) {
-    arr[i] = i;
+    arr[i] = init;
+    init = init + 1;
     i = i + 1;
   }
 }
@@ -52,5 +55,8 @@ int sum3d(int n, int arr[][10][10]) {
 int main() {
   int arr[10][10][10];
   init3d(10, arr);
-  return sum3d(10, arr);
+  int sum = sum3d(10, arr);
+  sum = sum + sum2d(10, arr[1]);
+  sum = sum + sum1d(10, arr[2][3]);
+  return sum;
 }
