@@ -19,4 +19,5 @@ int main() {
       else while (0);
     }
   }
+  return -1;
 }
