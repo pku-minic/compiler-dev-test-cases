@@ -5,5 +5,6 @@ int e[5][6];
 int f[5][6], g, h[5][6];
 
 int main() {
-  return 2;
+  // global value should zero init
+  return a[len - 1] + b[len -1] + d[len - 1] + e[0][0];
 }
