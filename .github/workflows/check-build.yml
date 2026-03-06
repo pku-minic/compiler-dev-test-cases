@@ -26,7 +26,7 @@ jobs:
           path: sysy-runtime-lib
 
       - name: Build sysy-runtime-lib
-        run: make -C sysy-runtime-lib -j
+        run: make -C sysy-runtime-lib AR="ar ru" RANLIB="ranlib" -j
 
       - name: Build Test Cases
         run: LIB_DIR=sysy-runtime-lib/build make -j
