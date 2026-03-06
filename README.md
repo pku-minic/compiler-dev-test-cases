@@ -1,5 +1,7 @@
 # compiler-dev-test-cases
 
+[![Check and Build](https://github.com/pku-minic/compiler-dev-test-cases/workflows/Check%20and%20Build/badge.svg)](https://github.com/pku-minic/compiler-dev-test-cases/actions/workflows/check-build.yml)
+
 为 SysY 编译器设计的本地测试用例, 已经包含于[编译器开发环境](https://github.com/pku-minic/compiler-dev).
 
 `testcases` 目录内存放了测试用例的源文件, 并且已经按照[编译实践在线文档](https://pku-minic.github.io/online-doc/)的章节划分分类.
