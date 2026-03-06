@@ -1,0 +1,32 @@
+name: Check and Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  check_build:
+    name: Check and Build
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip-ci')"
+    timeout-minutes: 30
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Check Test Case Format
+        run: ./reorder.py -c
+
+      - name: Clone sysy-runtime-lib
+        uses: actions/checkout@v6
+        with:
+          repository: pku-minic/sysy-runtime-lib
+          path: sysy-runtime-lib
+
+      - name: Build sysy-runtime-lib
+        run: make -C sysy-runtime-lib -j
+
+      - name: Build Test Cases
+        run: LIB_DIR=sysy-runtime-lib/build make -j
